@@ -1,0 +1,12 @@
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-parser.txt
+
+python3 fos_curriculum_parser.py \
+  "учебный_план.xlsx" \
+  --output curriculum.json
+
+python3 fos_curriculum_parser.py \
+  "учебный_план.xlsx" \
+  --discipline-code "Б1.В.07" \
+  --output marketing.json
